@@ -6,8 +6,8 @@ type Props = {
 };
 
 const EventsFilterSidebar = ({ searchParams }: Props) => {
-  const fromValue = searchParams?.from?.toString();
-  const toValue = searchParams?.to?.toString();
+  // const fromValue = searchParams?.from?.toString();
+  // const toValue = searchParams?.to?.toString();
   return (
     <>
       <form
@@ -30,7 +30,7 @@ const EventsFilterSidebar = ({ searchParams }: Props) => {
               type="date"
               name="from"
               id="from"
-              value={fromValue}
+              // value={fromValue}
             />
           </div>
           <div className="relative w-full">
@@ -45,7 +45,7 @@ const EventsFilterSidebar = ({ searchParams }: Props) => {
               type="date"
               name="to"
               id="to"
-              value={toValue}
+              // value={toValue}
             />
           </div>
         </div>
@@ -58,7 +58,7 @@ const EventsFilterSidebar = ({ searchParams }: Props) => {
         </label>
         <div className="relative w-full mb-8">
           <input
-            value={searchParams?.q}
+            // value={searchParams?.q}
             type="text"
             id="q"
             name="q"

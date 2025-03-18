@@ -7,8 +7,8 @@ type Props = {
 };
 
 const NewsFilterSidebar = ({ searchParams }: Props) => {
-  const fromValue = searchParams?.from?.toString();
-  const toValue = searchParams?.to?.toString();
+  // const fromValue = searchParams?.from?.toString();
+  // const toValue = searchParams?.to?.toString();
   return (
     <>
       <form
@@ -31,7 +31,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
               type="date"
               name="from"
               id="from"
-              defaultValue={fromValue}
+              // defaultValue={fromValue}
             />
           </div>
           <div className="relative w-full">
@@ -46,7 +46,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
               type="date"
               name="to"
               id="to"
-              defaultValue={toValue}
+              // defaultValue={toValue}
             />
           </div>
         </div>
@@ -59,7 +59,7 @@ const NewsFilterSidebar = ({ searchParams }: Props) => {
         </label>
         <div className="relative w-full mb-8">
           <input
-            defaultValue={searchParams?.q}
+            // defaultValue={searchParams?.q}
             type="text"
             id="q"
             name="q"
