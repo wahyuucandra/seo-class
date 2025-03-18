@@ -30,7 +30,7 @@ const NewsSection = (props: Props) => {
           className="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
           href="/news"
         >
-          Read more
+          More News Content
           <ChevronRight size={16} />
         </Link>
       </div>

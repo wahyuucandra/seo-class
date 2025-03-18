@@ -66,7 +66,7 @@ const AboutUs = (props: Props) => {
             </div>
             <button className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex">
               <span className="px-1.5 text-indigo-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">
-                Read More
+                About Us More
               </span>
               <svg
                 className="group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
