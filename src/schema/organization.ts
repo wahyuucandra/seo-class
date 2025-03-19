@@ -1,11 +1,11 @@
-import { env } from "process";
+import { envClient } from "@/utils/environments";
 
 export const organizationSchema = {
   '@type': 'Organization',
   name: 'ACC ONE',
-  url: env.APP_URL,
-  logo: `${env.APP_URL}/logo.svg`,
-  image: `${env.APP_URL}/logo.svg`,
+  url: envClient.NEXT_PUBLIC_API_URL,
+  logo: `${envClient.NEXT_PUBLIC_API_URL}/logo.svg`,
+  image: `${envClient.NEXT_PUBLIC_API_URL}/logo.svg`,
   sameAs: [
     'https://www.facebook.com/acconeid',
     'https://www.instagram.com/acconeid',
@@ -26,7 +26,7 @@ export const organizationSchema = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: `${env.APP_URL}/search/result={search_term_string}`,
+      urlTemplate: `${envClient.NEXT_PUBLIC_API_URL}/search/result={search_term_string}`,
     },
     'query-input': {
       '@type': 'PropertyValueSpecification',
