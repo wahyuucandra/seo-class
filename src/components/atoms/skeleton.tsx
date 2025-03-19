@@ -1,4 +1,4 @@
-import { cn } from "@/helpers/utils/utils";
+import { cn } from "@/utils/helpers/utils";
 
 
 

@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/helpers/utils/utils";
+import { cn } from "@/utils/helpers/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";

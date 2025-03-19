@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import satellite from "../satellite";
 import { Metadata } from "next";
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 
 export const filterEvents = async (formData: FormData) => {
   const from = formData.get("from") as string;

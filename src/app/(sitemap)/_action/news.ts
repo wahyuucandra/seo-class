@@ -1,5 +1,5 @@
-import { envClient } from "@/helpers/environments/env";
-import { escapeHtml } from "@/helpers/utils/utils";
+import { envClient } from "@/utils/environments";
+import { escapeHtml } from "@/utils/helpers/utils";
 import { getNews } from "@/services/news/api";
 import { News } from "@/interface/news";
 

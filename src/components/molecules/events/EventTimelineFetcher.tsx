@@ -1,4 +1,4 @@
-import { getQueryClient } from "@/helpers/utils/get-query-client";
+import { getQueryClient } from "@/utils/helpers/get-query-client";
 import { eventTimelineOptions } from "@/services/events/query";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import React from "react";

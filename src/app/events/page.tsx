@@ -3,7 +3,7 @@ import Events from "@/components/molecules/Events";
 import { EventParams } from "@/interface/events";
 import React from "react";
 import { Metadata } from "next";
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 
 export const metadata: Metadata = {
   title: "Event - Circle",

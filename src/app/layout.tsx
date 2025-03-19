@@ -1,11 +1,14 @@
 import RQProvider from "@/components/organisms/RQProvider";
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import StructuredData from "@/components/atoms/StructuredData";
 import { organizationSchema } from "@/schema/organization";
+import CustomGTM from "@/components/atoms/CustomGTM";
+import CustomGA from "@/components/atoms/CustomGA";
+import { env } from "process";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +43,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <CustomGTM containerId={env.GTM_ID as string} />
+        <CustomGA containerId={env.GA_ID as string} />
         <StructuredData id="organization-schema" data={organizationSchema} />
       </head>
       <body className={inter.className}>

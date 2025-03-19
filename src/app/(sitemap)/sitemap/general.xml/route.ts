@@ -1,4 +1,4 @@
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 import { getServerSideSitemap } from "next-sitemap";
 export async function GET() {
   const fields = ["", "/about-us", "/news", "/events"];

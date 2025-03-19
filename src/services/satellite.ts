@@ -1,4 +1,4 @@
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 import axios from "axios";
 
 const satellite = axios.create({

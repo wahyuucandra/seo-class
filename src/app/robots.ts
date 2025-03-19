@@ -1,4 +1,4 @@
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 import { MetadataRoute } from "next";
 
 const routes = ["general.xml", "news.xml", "events.xml"];

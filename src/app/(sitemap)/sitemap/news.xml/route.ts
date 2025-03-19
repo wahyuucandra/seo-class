@@ -1,4 +1,4 @@
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 import { getServerSideSitemapIndex } from "next-sitemap";
 import { getNewsData } from "../../_action/news";
 

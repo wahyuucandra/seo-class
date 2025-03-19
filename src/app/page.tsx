@@ -1,5 +1,5 @@
 import MainLayout from "@/components/organisms/MainLayout";
-import { envClient } from "@/helpers/environments/env";
+import { envClient } from "@/utils/environments";
 import Home from "@/components/molecules/Home";
 import { Metadata } from "next";
 

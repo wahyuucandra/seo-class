@@ -1,4 +1,4 @@
-import { getQueryClient } from "@/helpers/utils/get-query-client";
+import { getQueryClient } from "@/utils/helpers/get-query-client";
 import { newsOptions, newsSectionOptions } from "@/services/news/query";
 import { NewsParams } from "@/interface/news";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
