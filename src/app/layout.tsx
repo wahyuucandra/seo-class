@@ -8,7 +8,6 @@ import StructuredData from "@/components/atoms/StructuredData";
 import { organizationSchema } from "@/schema/organization";
 import CustomGTM from "@/components/atoms/CustomGTM";
 import CustomGA from "@/components/atoms/CustomGA";
-import { env } from "process";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,11 +39,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>
-        <CustomGTM containerId={env.GTM_ID as string} />
-        <CustomGA containerId={env.GA_ID as string} />
+        <CustomGTM containerId={envClient.GTM_ID as string} />
+        <CustomGA containerId={envClient.GA_ID as string} />
         <StructuredData id="organization-schema" data={organizationSchema} />
       </head>
       <body className={inter.className}>
