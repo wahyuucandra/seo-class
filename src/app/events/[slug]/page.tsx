@@ -1,9 +1,7 @@
-import MainLayout from "@/components/organisms/MainLayout";
 import EventDetail from "@/components/molecules/EventDetail";
 import React, { Suspense } from "react";
 import ClientMetadata from "@/components/atoms/ClientMetadata";
-import { getMetadata } from "@/services/news/actions";
-import EventSkeleton from "@/components/molecules/events/EventSkeleton";
+import { getMetadata } from "@/services/events/actions";
 import EventDetailFetcher from "@/components/molecules/events/EventDetailFetcher";
 
 type Props = {
