@@ -1,13 +1,13 @@
+import { getEvents } from "@/services/events/api";
 import { envClient } from "@/utils/environments";
 import { escapeHtml } from "@/utils/helpers/utils";
-import { getNews } from "@/services/news/api";
-import { News } from "@/interface/news";
+import { Event } from "@/interface/events";
 
 import { ISitemapField } from "next-sitemap";
 
-export const getNewsData = async (page = "1", limit = "3") => {
+export const getEventsData = async (page = "1", limit = "3") => {
   try {
-    const result = await getNews({ page, limit });
+    const result = await getEvents({ page, limit });
 
     if (result.data) {
       const data = result.data;
@@ -21,20 +21,22 @@ export const getNewsData = async (page = "1", limit = "3") => {
   }
 };
 
-export default async function getNewsSitemap(
+export default async function getEventsSitemap(
   page: string
 ): Promise<ISitemapField[]> {
-  const result = await getNewsData(page);
+  const result = await getEventsData(page);
   const data = result?.data;
 
-  const sitemapLinks = data?.map((res: News) => {
+  console.log(data)
+
+  const sitemapLinks = data?.map((res: Event) => {
     const postedDate = new Intl.DateTimeFormat("id-ID", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
     }).format(new Date(res.created_at));
 
-    const loc = `${envClient.SITE_URL}/news/${res.slug}`;
+    const loc = `${envClient.SITE_URL}/event/${res.slug}`;
 
     return {
       loc: escapeHtml(loc),

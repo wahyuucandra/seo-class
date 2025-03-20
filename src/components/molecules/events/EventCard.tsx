@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Event } from "@/interface/events";
+import { CustomHeading } from "@/components/atoms/CustomHeading";
 
 type Props = {
   data: Event;
@@ -30,9 +31,9 @@ const EventCard = ({ data }: Props) => {
             at {data.time.split(":").slice(0, 2).join(":")}
           </p>
         </div>
-        <p className="font-semibold text-sm text-gray-800">
+        <CustomHeading heading="h1" className="font-semibold text-sm text-gray-800">
           {data.title}
-        </p>
+        </CustomHeading>
         <p className="mt-1 text-sm text-gray-600">
           {data.description}
         </p>

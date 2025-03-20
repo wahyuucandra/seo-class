@@ -17,14 +17,16 @@ const NewsContent = ({ params }: Props) => {
   const { data } = useSuspenseQuery(newsOptions(params));
 
   const generateNextPageHref = () => {
-    const nextPage = parseInt(params?.page || "0") + 1;
+    const maxPage = Math.ceil(data.pagination.total / data.pagination.perPage)
+    const nextPage = parseInt(params?.page || "0") >= maxPage ? maxPage : parseInt(params?.page || "0") + 1;
     const newParams = { ...params, page: nextPage.toString() };
 
     return "/news?" + new URLSearchParams(newParams).toString();
   };
 
   const generatePreviousPageHref = () => {
-    const previousPage = parseInt(params?.page || "0") - 1;
+    const minPage = 1
+    const previousPage = parseInt(params?.page || "0") <= minPage ? minPage : parseInt(params?.page || "0") - 1;
     const newParams = { ...params, page: previousPage.toString() };
 
     return "/news?" + new URLSearchParams(newParams).toString();

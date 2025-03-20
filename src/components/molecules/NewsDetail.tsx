@@ -6,6 +6,7 @@ import Link from "next/link";
 import React from "react";
 import StructuredData from "../atoms/StructuredData";
 import { generateSingleImageSchema } from "@/schema/image";
+import { CustomHeading } from "../atoms/CustomHeading";
 
 type Props = {
   slug: string;
@@ -31,9 +32,9 @@ const NewsDetail = ({ slug }: Props) => {
             <ArrowLeft size={24} />
             <span className="ml-4">Back to News</span>
           </Link>
-          <h1 className="text-white font-manrope font-semibold text-4xl min-[500px]:text-5xl leading-tight mb-8">
+          <CustomHeading heading="h1" className="text-white font-manrope font-semibold text-4xl min-[500px]:text-5xl leading-tight mb-8">
             {data?.data.title}
-          </h1>
+          </CustomHeading>
           <div className="flex items-center justify-between">
             <div className="data">
               <p className="font-medium text-xl leading-8 text-white mb-1">
@@ -46,9 +47,9 @@ const NewsDetail = ({ slug }: Props) => {
                   </span>
                 ))}
               </p>
-              <p className="font-normal text-lg leading-7 text-white mt-4">
+              <CustomHeading heading="h3" className="font-normal text-lg leading-7 text-white mt-4">
                 Author: {data?.data.author}
-              </p>
+              </CustomHeading>
             </div>
           </div>
         </div>

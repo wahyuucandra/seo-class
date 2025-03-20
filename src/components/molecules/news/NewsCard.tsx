@@ -1,3 +1,4 @@
+import { CustomHeading } from "@/components/atoms/CustomHeading";
 import { News } from "@/interface/news";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,9 +26,9 @@ const NewsCard = ({ data }: Props) => {
         </div>
       </div>
       <div className="p-2">
-        <h3 className="mt-2 font-medium text-gray-800 group-hover:text-blue-600 group-focus:text-blue-600">
+        <CustomHeading heading="h1" className="mt-2 font-medium text-gray-800 group-hover:text-blue-600 group-focus:text-blue-600">
           {data.title}
-        </h3>
+        </CustomHeading>
         <p className="mt-2 text-sm text-gray-600">
           {new Intl.DateTimeFormat("id-ID", {
             year: "numeric",

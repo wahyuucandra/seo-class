@@ -26,10 +26,9 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    "Adsbot-Google": `${
-      envClient.NEXT_PUBLIC_ENVIRONMENT === "production"
-        ? "index, follow"
-        : "noindex, nofollow"
+    "Adsbot-Google": `${envClient.NEXT_PUBLIC_ENVIRONMENT === "production"
+      ? "index, follow"
+      : "noindex, nofollow"
     }`,
   },
 };
@@ -54,3 +53,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

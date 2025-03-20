@@ -1,6 +1,7 @@
 import { getServerSideSitemap } from "next-sitemap";
 import { redirect } from "next/navigation";
 import getNewsSitemap from "../../_action/news";
+import getEventsSitemap from "../../_action/events";
 
 type RequestParams = {
   params: {
@@ -17,6 +18,10 @@ export async function GET(req: Request, { params }: RequestParams) {
     {
       type: "news",
       getter: (page: string) => getNewsSitemap(page),
+    },
+    {
+      type: "events",
+      getter: (page: string) => getEventsSitemap(page),
     },
   ];
 
