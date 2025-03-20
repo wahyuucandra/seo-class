@@ -36,7 +36,7 @@ export default async function getEventsSitemap(
       day: "2-digit",
     }).format(new Date(res.created_at));
 
-    const loc = `${envClient.SITE_URL}/event/${res.slug}`;
+    const loc = `${envClient.SITE_URL}/events/${res.slug}`;
 
     return {
       loc: escapeHtml(loc),
