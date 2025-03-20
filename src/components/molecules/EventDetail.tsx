@@ -1,20 +1,21 @@
 'use client'
 import { eventDetailOptions } from "@/services/events/query";
 import { useSuspenseQuery } from "@tanstack/react-query";
+import Image from "next/image";
 import React from "react";
 
 type Props = {
   slug: string;
 };
 
-const EventDetail = ({slug } : Props) => {
+const EventDetail = ({ slug }: Props) => {
   const { data } = useSuspenseQuery(eventDetailOptions(slug));
 
   return (
     <div className="relative py-20">
       <div className="absolute inset-0 overflow-hidden bg-indigo-50">
         <img
-          alt={data?.data?.slug}
+          alt="banner-event"
           fetchPriority="high"
           width="918"
           height="1495"
@@ -31,13 +32,22 @@ const EventDetail = ({slug } : Props) => {
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-          <h1 className="font-display text-5xl font-bold tracking-tighter text-blue-600 sm:text-7xl">
+          <h1 className="font-display text-center text-5xl font-bold tracking-tighter text-blue-600 sm:text-7xl">
             <span className="sr-only">DeceptiConf - </span> {data?.data.title}
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
               {data?.data.description}
             </p>
+            <div className="py-2">
+              <Image
+                className="w-full h-full object-cover rounded-xl"
+                src={data?.data?.imageurl ?? ''}
+                alt={`event-${data?.data?.slug}`}
+                width={560}
+                height={315}
+              />
+            </div>
             <p>
               At DeceptiConf you’ll learn about the latest dark patterns being
               developed to trick even the smartest visitors, and you’ll learn
@@ -46,7 +56,7 @@ const EventDetail = ({slug } : Props) => {
           </div>
           <a
             className="inline-flex justify-center rounded-2xl bg-blue-600 p-4 text-base font-semibold text-white hover:bg-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full"
-            href="#"
+            href="/events"
           >
             Get your tickets
           </a>

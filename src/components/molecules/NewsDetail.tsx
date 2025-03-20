@@ -47,7 +47,7 @@ const NewsDetail = ({ slug }: Props) => {
                   </span>
                 ))}
               </p>
-              <CustomHeading heading="h3" className="font-normal text-lg leading-7 text-white mt-4">
+              <CustomHeading heading="h2" className="font-normal text-lg leading-7 text-white mt-4">
                 Author: {data?.data.author}
               </CustomHeading>
             </div>

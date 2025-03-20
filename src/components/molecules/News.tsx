@@ -1,4 +1,3 @@
-import NewsCard from "@/components/molecules/news/NewsCard";
 import NewsCardSkeleton from "@/components/molecules/news/NewsCardSkeleton";
 import NewsContent from "@/components/molecules/news/NewsContent";
 import NewsPageFetcher from "@/components/molecules/news/NewsPageFetcher";
@@ -12,7 +11,7 @@ type Props = {
 
 const News = ({ searchParams }: Props) => {
   const defaultSearchParams: NewsParams = {
-    limit: "10",
+    limit: "6",
     page: "1",
   };
 
