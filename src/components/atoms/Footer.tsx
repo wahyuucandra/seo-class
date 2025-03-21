@@ -64,7 +64,6 @@ const Footer = (props: Props) => {
                 <a
                   className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200"
                   href="#"
-                  rel="nofollow"
                 >
                   Blog
                 </a>
@@ -73,7 +72,6 @@ const Footer = (props: Props) => {
                 <a
                   className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200"
                   href="#"
-                  rel="nofollow"
                 >
                   Careers
                 </a>{" "}
@@ -85,7 +83,6 @@ const Footer = (props: Props) => {
                 <a
                   className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200"
                   href="#"
-                  rel="nofollow"
                 >
                   Customers
                 </a>

@@ -56,8 +56,8 @@ const Navbar = (props: Props) => {
         >
           <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
             <NavbarListItem href="/" name="Home" />
-            <NavbarListItem href="/news" name="News" rel="nofollow"/>
-            <NavbarListItem href="/events" name="Events" rel="nofollow" />
+            <NavbarListItem href="/news" name="News"/>
+            <NavbarListItem href="/events" name="Events" />
             <NavbarListItem href="/about-us" name="About Us" />
           </div>
         </div>

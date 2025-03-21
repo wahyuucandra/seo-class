@@ -4,7 +4,7 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import React from "react";
 
 type Props = {
-  id: string;
+  id: number;
   children: React.ReactNode;
 };
 

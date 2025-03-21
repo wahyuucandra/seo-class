@@ -4,7 +4,7 @@ import EventDetailFetcher from "@/components/molecules/events/EventDetailFetcher
 
 type Props = {
   params: Promise<{
-    id: string
+    id: number
   }>
 }
 

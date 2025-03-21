@@ -23,7 +23,6 @@ const NavbarListItem = ({ href, name, className = "",  rel}: Props) => {
             "before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400"
         )}
         href={href}
-        rel={rel}
         aria-current="page"
       >
         {name}

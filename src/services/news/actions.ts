@@ -29,7 +29,7 @@ export const filterNews = async (formData: FormData) => {
 export async function getMetadata({
   params,
 }: {
-  params: { id: string };
+  params: { id: number };
 }): Promise<Metadata> {
   const id = params.id;
 

@@ -13,10 +13,10 @@ export const eventOptions = (params?: EventParams) => {
   };
 };
 
-export const eventDetailOptions = (id: string) => {
+export const eventDetailOptions = (id: number) => {
   return {
     queryKey: ["news", "detail", id],
-    queryFn: () => getEventsDetail(id),
+    queryFn: () => getEventsDetail({ id }),
   };
 };
 

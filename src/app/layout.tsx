@@ -4,10 +4,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
-import StructuredData from "@/components/atoms/StructuredData";
-import { organizationSchema } from "@/schema/organization";
-import CustomGTM from "@/components/atoms/CustomGTM";
-import CustomGA from "@/components/atoms/CustomGA";
 
 const inter = Inter({ subsets: ["latin"] });
 
