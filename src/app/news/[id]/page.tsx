@@ -1,8 +1,6 @@
 import NewsDetailFetcher from "@/components/molecules/news/NewsDetailFetcher";
 import NewsDetailSkeleton from "@/components/molecules/news/NewsDetailSkeleton";
-import ClientMetadata from "@/components/atoms/ClientMetadata";
 import NewsDetail from "@/components/molecules/NewsDetail";
-import { getMetadata } from "@/services/news/actions";
 import { Suspense } from "react";
 
 type Props = {

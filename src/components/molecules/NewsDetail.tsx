@@ -4,7 +4,6 @@ import { useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { CustomHeading } from "../atoms/CustomHeading";
 
 type Props = {
   id: number;
