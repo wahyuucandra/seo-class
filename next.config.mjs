@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+import JavaScriptObfuscator from 'webpack-obfuscator';
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -12,6 +14,21 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(
+        new JavaScriptObfuscator(
+          {
+            rotateStringArray: true,
+            stringArray: true,
+            stringArrayThreshold: 0.75,
+          },
+          ['_next/**/*.js']
+        )
+      );
+    }
+    return config;
+  }
 };
 
 export default nextConfig;
