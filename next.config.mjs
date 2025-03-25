@@ -22,8 +22,13 @@ const nextConfig = {
             rotateStringArray: true,
             stringArray: true,
             stringArrayThreshold: 0.75,
+            controlFlowFlattening: true,
+            deadCodeInjection: true,
+            debugProtection: true,
+            selfDefending: true,
+            disableConsoleOutput: true,
           },
-          ['_next/**/*.js']
+          ['**/*.tsx', '**/*.ts', '**/*.mts', '**/*.jsx']
         )
       );
     }
