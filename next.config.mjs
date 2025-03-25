@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import JavaScriptObfuscator from 'webpack-obfuscator';
+const JavaScriptObfuscator = require("webpack-obfuscator");
 
 const nextConfig = {
   images: {
