@@ -22,7 +22,7 @@ spec:
         app: seo-class-web-training
     spec:
       containers:
-        - image: localhost:5000/training/seo-class-web:latest
+        - image: seo-class-web/training/seo-class-web:latest
           imagePullPolicy: Always
           name: seo-class-web-training
           ports:
