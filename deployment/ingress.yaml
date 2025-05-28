@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: '30'
+    nginx.ingress.kubernetes.io/proxy-read-timeout: '1800'
+    nginx.ingress.kubernetes.io/proxy-send-timeout: '1800'
+  name: seo-class-web-training-ingress
+  namespace: training
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: seo-class-web-training.localhost.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: seo-class-web-training-svc
+                port:
+                  number: 3000
+            path: /
+            pathType: ImplementationSpecific
